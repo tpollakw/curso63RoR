@@ -1,0 +1,55 @@
+<!DOCTIPE htmL>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+</head>
+
+<body>
+    <h1>FORMULARIO DE REGISTRO</h1>
+    <form method="POST">
+        <label for="nombre">Nombre:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="nombre" name="nombre">
+        <br><br>
+        <label for="apellido">Apellido:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" id="apellido" name="apellido">
+        <br><br>
+        <label for="email">Email:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="email" id="email" name="email">
+        <br><br>
+        <label for="pswrd1">Contraseña:</label>
+        <input type="password" id="pswrd" name="pswrd1">
+        <br><br>
+        <label for="pswrd">Confirmar:</label>&nbsp;&nbsp;
+        <input type="password" id="pswrd1" name="pswrd1">
+        <br><br>
+        <label for="cumple">Cumpleaños:</label>
+        <input type="date" id="cumple" name="cumple">
+        <br><br>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="sexo">
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="sexo">
+        <label for="otro">Otro</label>
+        <input type="radio" id="otro" name="sexo">
+        <br><br>
+        <p>Una breve descripcion de ti:</p>
+        <textarea id="descripcion" name="descripcion"></textarea>
+        <br><br>
+        <label for="lenguajes">Lenguaje Favorito:</label>
+        <select id="lenguajes" name="lenguajes">
+            <option value="-1">Seleccione su lenguaje...</option>
+            <option value="1">HTML </option>
+            <option value="2">CSS </option>
+            <option value="3">JavaScript </option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>

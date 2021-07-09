@@ -1,0 +1,125 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*
+        Teléfono	Ancho menor o igual a 480px
+        Tablet	Ancho entre  481px y 1023px
+        Desktop	Ancho mayor o igual a 1024px
+        */
+
+
+/* Telefono*/
+
+@media only screen and (max-width: 480px) {
+    /* we will set these stylings only if the device is a screen with a width of 480px or less */
+    #header {
+        background-color: darkgray;
+        display: block;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #main {
+        background-color: gray;
+        display: inline-block;
+        text-align: justify;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #footer {
+        background-color: yellow;
+        display: block;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #desktop {
+        display: none;
+    }
+    #tablet {
+        display: none;
+    }
+}
+
+
+/*tablet*/
+
+@media only screen and (min-width:481px) and (max-width: 1023px) {
+    /* we will set these stylings only if the device is a screen with a width of 480px or less */
+    #header {
+        background-color: darkgray;
+        display: block;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #main {
+        background-color: gray;
+        display: inline-block;
+        text-align: justify;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #footer {
+        background-color: yellow;
+        display: block;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #phone {
+        display: none;
+    }
+    #desktop {
+        display: none;
+    }
+}
+
+
+/*desktop*/
+
+@media only screen and (min-width: 1024px) {
+    /* we will set these stylings only if the device is a screen with a width of 480px or less */
+    #header {
+        background-color: darkgray;
+        display: block;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #main {
+        background-color: gray;
+        display: inline-block;
+        text-align: justify;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #footer {
+        background-color: yellow;
+        display: block;
+        margin-top: 5px;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #tablet {
+        display: none;
+    }
+    #phone {
+        display: none;
+    }
+}

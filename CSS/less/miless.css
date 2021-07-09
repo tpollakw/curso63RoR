@@ -1,0 +1,28 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    background-color: silver;
+    width: 800px;
+    padding: 15px;
+}
+
+#div1 {
+    background-color: aquamarine;
+    width: auto;
+    height: 200px;
+}
+
+#div2 {
+    background-color: bisque;
+    width: auto;
+    height: 200px;
+}
+
+#div3 {
+    background-color: cornflowerblue;
+    width: auto;
+    height: 200px;
+}

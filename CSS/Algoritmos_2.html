@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos 2</title>
+    <script>
+        //Ejercicio 1
+        function multiply(x, y) {
+            console.log(x);
+            console.log(y);
+        }
+        b = multiply(2, 3);
+        console.log(b);
+        //Respuesta: 2,3
+
+        //Ejercicio 2
+        function multiply(x, y) {
+            return x * y;
+        }
+        b = multiply(2, 3);
+        console.log(b);
+        console.log(multiply(5, 2));
+        //Respuesta: 6,10
+
+        //Ejercicico 3
+        var x = [1, 2, 3, 4, 5, 10];
+        for (var i = 0; i < 5; i++) {
+            i = i + 3; //3,7
+            console.log(i);
+        }
+        //Respuesta: 3,7
+
+        //Ejercicio 4
+        var x = 15;
+        console.log(x);
+
+        function awesome() {
+            var x = 10;
+            console.log(x);
+        }
+        console.log(x);
+        awesome();
+        console.log(x);
+        //Respuesta: 15,15,10,15
+
+        //Ejercicio 5
+        for (var i = 0; i < 15; i += 2) {
+            console.log(i);
+        }
+        //Respuesta:0,2,4,6,8,10,12,14
+
+        //Ejercicio 6
+        for (var i = 0; i < 3; i++) {
+            for (var j = 0; j < 2; j++) {
+
+                console.log(i * j);
+            }
+        }
+        //Respuesta: 0,0,0,1,0,2
+
+        //Ejercicio 7
+        function looping(x, y) {
+            for (var i = 0; i < x; i++) {
+                for (var j = 0; j < x; j++) {
+
+                    console.log(i * j); //0,0,0,0,1,2,0,2,4
+                }
+            }
+        }
+        z = looping(3, 3);
+        console.log(z);
+        //Respuesta: //0,0,0,0,1,2,0,2,4
+
+        //Ejercicio 8
+        function looping(x, y) {
+            for (var i = 0; i < x; i++) { //0,1,2
+                for (var j = 0; j < y; j++) { //0,1,2,3,4
+
+                    console.log(i * j); //0,0,0,0,0,0,1,2,3,4,0,2,4,6,8
+                }
+            }
+            return x * y; //15
+        }
+        z = looping(3, 5); //15
+        console.log(z); //15
+        //Respuesta: 0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+
+        //Ejercicio 9
+        /*
+        Print 1 to x    
+        Por favor, completa los siguientes códigos para que la función imprima (print) todos los enteros (integers) de 1 a x. 
+        Si x es negativo, haz que se muestre (print/log) “número negativo” y que la función devuelva falso.*/
+        function printUpTo(x) {
+            if (x < 0) {
+                console.log("número negativo");
+                return ("false");
+            } else {
+                for (i = 0; i <= x; i++) {
+                    console.log(i);
+                }
+            }
+        }
+        printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
+        y = printUpTo(-10); // debería imprimir false
+        console.log(y); // debería imprimir false
+
+        //Ejercicio 10
+        /*
+        PrintSum
+        Completa el código de más abajo para que la función imprima enteros (integers) de 0 a x 
+        y donde cada entero imprima la suma (sum) parcial. Haz que la función entregue la suma final.*/
+        function printSum(x) {
+            var sum = 0;
+            for (var i = 0; i <= x; i++) {
+                console.log(i);
+                sum = sum + i;
+            }
+            return sum
+        }
+        y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+        console.log(y) // // debería imprimir 32640
+
+        //Ejercicio 11
+        /*
+        PrintSumArray
+        Completa el código a continuación para que la función entregue la suma de todos los valores en un array dado.*/
+        function printSumArray(x) {
+            var sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i]
+            }
+            return sum;
+        }
+        console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+
+        /*Ejercicio BONUS
+        Crea una función que entregue el elemento más grande (largest element) en un array. 
+        Por ejemplo largestElement([1,30,5,7]) debiera dar como resultado 30.*/
+        function largestElement(arreglo) {
+            var numero_mayor = arreglo[0];
+            for (var i = 0; i < arreglo.length; i++) {
+                if (numero_mayor < arreglo[i]) {
+                    numero_mayor = arreglo[i];
+                }
+            }
+            return numero_mayor;
+        }
+        console.log(largestElement([1, 30, 5, 7]));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

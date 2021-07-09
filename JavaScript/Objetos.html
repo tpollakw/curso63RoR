@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <script>
+        function arrayObjeto() {
+            //array o arreglo
+            var Dany = ['Daenerys', 'House Targaryen', 'Valyrian',
+                'Queen of the Andals the Rhoynar and the First Men',
+                'Lady Regnant of the Seven Kingdoms', 22, 'Protector of the Realm',
+                'Khaleesi of the Great Grass Sea', 'Breaker of Chains', 'Targaryen',
+                'Mother of Dragons', 'Queen of Meereen'
+            ];
+
+            console.log(Dany[4]); //22
+
+            //Diccionario -> de [] a {}
+            //palabra: definicion -> key o llave o clave
+            var Dany = {
+                edad: 22,
+                nombre: "Daenerys",
+                apellido: "Targaryen",
+                titulos: ['Lady Regnant of the Seven Kingdoms', 'Protector of the Realm']
+            };
+            console.log(Dany.titulos) //['Lady Regnant of the Seven Kingdoms', 'Protector of the Realm']
+            console.log(Dany.titulos[1]); //'Protector of the Realm'
+
+
+
+            var dojo = {}; // crea un objeto vacío
+            dojo = {
+                    name: 'Coding Dojo', // la propiedad puede almacenar un string
+                    number_of_students: 25, // la propiedad puede almacenar un número
+                    instructors: ['Andrew', 'Michael', 'Jay'], // la propiedad puede almacenar arrays
+                    location: { // ¡la propiedad puede incluso almacenar otro objeto!
+                        city: 'San Jose',
+                        state: 'CA',
+                        zipcode: 95112
+                    }
+                } // accede a las propiedades del objeto con notación de punto (.)
+
+            console.log(dojo.location.city);
+            console.log(dojo.instructors[2]);
+            dojo.instructors.push("Israel");
+            dojo.instructors.pop();
+            dojo.instructors.splice(1, 2); //elimina en rango (posicion inicial, cantidad elemtos a eliminar )
+            dojo.instructors.shift(); //elimina el primero
+
+
+
+            var glazedDonuts = [{
+                frosting: 'glazed',
+                style: 'cake',
+                type: 'old fashioned',
+                age: '45',
+                time: 'minutes'
+            }, {
+                frosting: 'glazed',
+                style: 'yeast raised',
+                type: 'regular',
+                age: '5',
+                time: 'minutes'
+            }, {
+                frosting: 'glazed',
+                style: 'yeast raised',
+                type: 'jelly filled',
+                age: '1',
+                time: 'seconds'
+            }];
+
+            console.log(glazedDonuts[1].style)
+
+            for (let i = 0; i < glazedDonuts.length; i++) {
+                console.log(glazedDonuts[i].style)
+            }
+
+
+            var users = [{
+                    name: "Michael",
+                    age: 37,
+                    compras: [{
+                        juguetes: "pelotas",
+                        libros: "harry",
+                        fecha_compra: "2021-06-12"
+                    }, {
+                        juguetes: "yoyo",
+                        libros: "señor",
+                        fecha_compra: "2021-07-12"
+                    }, {
+                        juguetes: "pelotas",
+                        libros: "harry2",
+                        fecha_compra: "2021-08-12"
+                    }]
+                },
+                //users[0].compras[1].libro
+                {
+                    name: "John",
+                    age: 30
+                }, {
+                    name: "David",
+                    age: 27
+                }
+            ];
+            //¿Cómo harías print/log de la edad de John?
+            console.log(users[1].age);
+            //¿Cómo harías print/log del nombre del primer objeto?
+            console.log(users[0].name);
+            //¿Cómo harías print/log del nombre y la edad de cada usuario utilizando un for loop? Tu output debería verse algo como esto
+            for (let i = 0; i < users.length; i++) {
+                console.log(users[i].name);
+                console.log(users[i].age);
+            }
+            //¿Cómo harías para imprimir el nombre de los mayores de edad?
+
+            for (let i = 0; i < users.length; i++) {
+                if (users[i].age >= 18) {
+                    console.log(users[i].name);
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

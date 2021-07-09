@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG DE PERROS</title>
+</head>
+
+<body>
+    <h1>BLOG DE PERROS</h1>
+    <br>
+    <img src="/Users/topo/Desktop/Ejercicios_Programacion/HTML/imagenes/perros.jpg" alt="perros" height="400" width="400">
+    <br>
+    <br>
+    <p>El perro (Canis familiaris o Canis lupus familiaris dependiendo de si se lo considera una especie por derecho propio o una subespecie del lobo),​ llamado perro doméstico o can, y en algunos lugares coloquialmente llamado chucho,​ tuso,​ choco, entre
+        otros; es un mamífero carnívoro de la familia de los cánidos, que constituye una especie del género Canis.​ En 2013, una población mundial estimada de perros estaba entre setecientos millones y novecientos ochenta y siete millones.​ Su tamaño
+        (o talla), su forma y pelaje es muy diverso según la raza. Posee un oído y olfato muy desarrollados, siendo este último su principal órgano sensorial. Su longevidad media es de diez a trece años,​ dependiendo de la raza. </p>
+    </p>
+    <br>
+    <p>Esta es una lista de algunas razas de perros con sus principales caracteristicas:</p>
+    <table>
+        <!--titulos de la tabla-->
+        <thead>
+            <!-- tr = fila-->
+            <tr>
+                <!--titulos-->
+                <th>#</th>
+                <th>Raza</th>
+                <th>Rango de Peso</th>
+                <th>Tamaño</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--fila-->
+            <tr>
+                <!--columna-->
+                <td>1</td>
+                <td>Bichón Malgtés</td>
+                <td>Hasta 4 Kg.</td>
+                <td>Miniatura</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Bedlington Terrier</td>
+                <td>Entre 5 y 10 Kg.</td>
+                <td>Pequeño</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Ariegeois</td>
+                <td>Entre 11 y 25 Kg.</td>
+                <td>Mediano</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Akita</td>
+                <td>Entre 26 y 44 Kg.</td>
+                <td>Grande</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Dogo de Burdeos</td>
+                <td>Más de 45 Kg.</td>
+                <td>Gigangte</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <p>Otras razas de perros:</p>
+    <ul>
+        <li>Labrador</li>
+        <li>Putbull</li>
+        <li>Chihuahua</li>
+        <li>Pastor Aleman</li>
+        <li>Husky</li>
+    </ul>
+    <br>
+    <a href="https://es.wikipedia.org/wiki/Canis_familiaris">Click aqui ara mayor informacion sobre perros</a>
+    <br><br>
+    <h1>Por favor, contesta esta breve encuesta:</h1>
+    <form method="POST">
+        <input type="radio" id="si_informacion" name="informacion">
+        <label for="si:informacion">Deseo obtener mas informacion</label>
+        <br>
+        <input type="radio" id="no_informacion" name="informacion">
+        <label for="no_informacion">No deseo obtener mas informacion</label>
+        <br><br>
+        <label for="email">Indicanos tu correo electronico:</label>
+        <input type="email" id="email" name="email">
+        <br>
+        <p>Como supiste de nosotros?</p>
+        <input type="checkbox" id="facebook" name="llegada" value="facebook">
+        <label for="facebook">Facebook</label>
+        <br>
+        <input type="checkbox" id="instagram" name="llegada" value="instagram">
+        <label for="instagram">Instagram</label>
+        <br>
+        <input type="checkbox" id="otro" name="llegada" value="otro">
+        <label for="otro">Otro</label>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>

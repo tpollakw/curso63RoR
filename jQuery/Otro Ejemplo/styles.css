@@ -1,0 +1,19 @@
+.row {
+	display: flex;
+}
+
+.col1{
+	margin-right: 10px ;
+
+}
+
+.col2{
+	margin-right: 10px ;
+
+}
+
+.enunciado{
+	background-color: #cddc39;
+    width: 385px;
+    border-radius: 10px;
+}

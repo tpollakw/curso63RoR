@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmos 3::</title>
+    <script>
+        //Ejercicio 1
+        function a(x, y) { //x =5; y = 5;
+            return 5;
+        }
+        console.log(a(5, 5)); //console.log(5);
+        //Respuesta: 5
+
+        //Ejercicio 2
+        function a(x, y) { //x=6; y=8;
+            let z = []; //creacion de array vacio; z.length=0;
+            //z = [6,8,5];
+            z.push(x); //agregue x=6, al final del arreglo
+            z.push(y); //agrega y=8 , al final del arreglo 
+            z.push(5); //agrega al final del arreglo el numero 5
+            console.log(z); //[6,8,5]
+            return z; //return [6,8,5];
+        }
+        var b = a(2, 2); //b = [2,2,5];
+        console.log(b);
+        console.log(a(6, 8)); //console.log([6,8,5]);
+        //Respuesta: [2,2,5],[2,2,5],[6,8,5],[6,8,5]
+
+        /*Ejercicio 3*/
+        function a(x) { //x = 2
+            z = []; //arreglo vacio; z.length=0; (tamaño o cantidad de elementos)
+            //z=[2,2];
+            z.push(x);
+            z.pop(); //elimina el ultimo elemento
+            z.push(x);
+            z.push(x);
+            return z; //return [2,2];
+        }
+        var y = a(2); //y = [2,2];
+        y.push(5); //y = [2,2,5];
+        console.log(y);
+        //Respuesta: [2,2,5]
+
+
+        /*
+                array=["a","b","c","d","e"];
+                array.length = 5 ; cuanto elementos existen en el array?
+                5 - 1 = 4
+                array[array.length - 1] => array[4]
+        */
+
+
+        /*Ejercicio 4*/
+        function a(x) { //x = [2, 3, 4, 5]
+            //x[0]=2 < x[1]=3
+            if (x[0] < x[1]) { //2<3
+                return true;
+            } else {
+                return false;
+            }
+        }
+        b = a([2, 3, 4, 5]); //b = true;
+        console.log(b); //console.log(true);
+        //Respuesta: true
+
+        /*Ejercicio 5*/
+        function a(x) {
+            //x = ["Coding", "Coding", "Coding", "Coding"]; x.length = 4
+
+            for (var i = 0; i < x.length; i = i + 1) { //i=4
+
+                if (x[i] > 0) { //4>0
+                    x[i] = "Coding";
+                }
+            }
+            return x; //return ["Coding", "Coding", "Coding", "Coding"];
+        }
+        console.log(a([1, 2, 3, 4])); //console.log(["Coding", "Coding", "Coding", "Coding"]);
+        //Respuesta:["Coding", "Coding", "Coding", "Coding"]
+
+        /*ejercicio 5.? */
+
+        function elegirAlAzar(array) {
+            //var inicio = array[0];
+            //var fin = array[array.length - 1];
+
+            //math.random (0 y 1)
+            var posicion_aleatoria = Math.floor(Math.random() * array.length) //  0 - 15
+
+            var apellido = array[posicion_aleatoria];
+            console.log(" *** El elegido es: " + apellido);
+        }
+
+        var curso = ["Ramiro", "Sanchez", "Monje",
+            "Jimenez", "Riquelme", "Garay", "Artavia", "Metayer",
+            "Zencovich", "Figueroa", "Palma", "Pollak", "Barria",
+            "Sotomayor", "Cardenas", "Estrada"
+        ];
+        elegirAlAzar(curso);
+
+        /*Ejercicio 6*/
+        function a(x) {
+            for (var i = 0; i < x.length; i++) {
+                if (x[i] > 5) {
+                    x[i] = “Coding”;
+                } else if (x[i] < 0) {
+                    x[i] = “Dojo”;
+                }
+            }
+            return x;
+        }
+        console.log(a([5, 7, -1, 4]))
+            //Respuesta:[Coding,Dojo]
+
+        //Ejercicio 7
+        function a(x) {
+            if (x[0] > x[1]) {
+                return x[1];
+            }
+            return 10;
+        }
+        b = a([5, 10])
+        console.log(b);
+        //Respuesta:10
+
+        //Ejercicio 8
+        function sum(x) {
+            sum = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                console.log(sum);
+            }
+            return sum;
+        }
+        //Respuesta: No hay llamado a la funcion
+
+        //Ejercicio 9
+        /*Analiza los valores de un array y obtén el promedio (average) de esos valores.*/
+        function printAverage(x) {
+            var sum = 0;
+            var promedio = 0;
+            for (var i = 0; i < x.length; i++) {
+                sum = sum + x[i];
+                promedio = sum / x.length;
+            }
+            return promedio;
+        }
+        y = printAverage([1, 2, 3]);
+        console.log(y); // should log 2
+
+        y = printAverage([2, 5, 8]);
+        console.log(y); // should log 5
+
+        //Ejercicio 10
+        /*Crea un array con todos los enteros impares (odd integers) entre 1 y 255 (inclusive)*/
+        function returnOddArray(a) {
+            var array = [];
+            for (var i = 1; i <= a; i++) {
+                if (i % 2 != 0) {
+                    array.push(i);
+                }
+            }
+            return array;
+        }
+        y = returnOddArray(255);
+        console.log(y); // should log [1,3,5,...,253,255]
+
+        //Ejercicio 11
+        /*Cuadra cada valor con un array dado, obteniendo el mismo array con valores cambiados..*/
+        function squareValue(x) {
+            var x1 = [];
+            var cuadrado = 0;
+            for (var i = 0; i < x.length; i++) {
+                cuadrado = x[i] * x[i];
+                x1.push(cuadrado);
+            }
+            return x1;
+        }
+        y = squareValue([1, 2, 3]);
+        console.log(y); // should log [1,4,9]
+
+        y = squareValue([2, 5, 8]);
+        console.log(y); // should log [4,25,64]
+    </script>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>

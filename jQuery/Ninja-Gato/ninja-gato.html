@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var nombreImagen = ['ninja0.png', 'ninja1.png', 'ninja2.png', 'ninja3.png'];
+            //append
+            for (let i = 0; i <= 4; i++) {
+                $('#container').append('<img src="img/ninja' + i + '.png" alt-src="img/cat' + i + '.png" >');
+                $('#container').append('<br>');
+            }
+
+            $('img').click(function() {
+                var temp = $(this).attr('src'); //var temp= "img/ninja0.png";
+                var nuevaImagen = $(this).attr('alt-src');
+                $(this).attr('src', nuevaImagen);
+                $(this).attr('alt-src', temp);
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+</body>
+
+</html>

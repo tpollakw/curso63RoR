@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones JQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //función click
+            $('#boton1').click(function() {
+                $('#parrafo1').text("click realizado en el botón"); //text(): cambia texto o captura el texto del elemento
+            });
+
+
+            //hide
+            $('#boton2').click(function() {
+                $('#parrafo2').hide(); //oculta el elemento
+            });
+
+
+            //show
+            $('#boton3').click(function() {
+                $('#parrafo2').show(); //mostrar
+            });
+
+
+            //toggle
+            $('#boton4').click(function() {
+                $('#parrafo2').toggle(); //mostrar
+            });
+
+            $('img').click(function() {
+                // console.log($(this));
+                if ($(this)[0].id == "#parrafo1") {
+                    $(this).text("click realizado en el botón");
+                } else if ($(this)[0].id == "#parrafo2") {
+
+                }
+            });
+
+
+            //addclass 
+            $('#parrafo3').click(function() {
+                $('#parrafo3').addClass('colorred fondo mt-1');
+            });
+
+
+            //html: cambia el contenido del elemento, incluso puede agregar html
+            $('#parrafo4').click(function() {
+                //html
+                $('#parrafo4').html("<span id=span1> texto </span>   <strong>de reemplazo</strong>");
+                //addClass
+                $('#span1').addClass('colorred');
+                //attr
+                $('#span1').attr('name', 'span1');
+                //append
+                $('#container').append('<img id=imagen1>');
+                $('#imagen1').attr('src', 'gato.jpg');
+                $('#imagen1').attr('width', '200');
+            });
+
+            //fin jquery
+        });
+    </script>
+    <style>
+        .colorred {
+            color: red;
+        }
+        
+        .fondo {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Función Click y Text</h1>
+        <p id="parrafo1">clik en el botón para llamar al evento click</p>
+        <button id="boton1">Click</button>
+        <hr>
+        <h1>Función Hide, Show y Toggle</h1>
+        <p id="parrafo2">clik en el botón para ocultar el parrafo</p>
+        <button id="boton2">Hide</button>
+        <button id="boton3">Show</button>
+        <button id="boton4">Toggle</button>
+        <hr>
+        <h1>ADDCLASS</h1>
+        <p id="parrafo3">esto es un parrafo</p>
+        <hr>
+        <h1>HTML</h1>
+        <p id="parrafo4">reemplazar el contenido</p>
+
+    </div>
+</body>
+
+</html>
