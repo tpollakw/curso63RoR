@@ -107,3 +107,6 @@ puts x.last #=> devuelve el último objeto en el Range
 puts x.max #=> devuelve el valor máximo en el Range
 puts x.min #=> devuelve el valor mínimo en el Range
 puts x. . avg #=> devuelve el valor promedio en el Range
+
+numeros=[2,4,6,8]
+puts numeros.reject {|elemento| elemento >5 } # retorna un arreglo contrario a lo que se evalue
