@@ -10,19 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_160743) do
+ActiveRecord::Schema.define(version: 2021_07_21_133202) do
 
-  create_table "clientes", force: :cascade do |t|
-    t.string "name"
+  create_table "mensajes", force: :cascade do |t|
+    t.text "content"
+    t.integer "usuario_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["usuario_id"], name: "index_mensajes_on_usuario_id"
+  end
+
+  create_table "rols", force: :cascade do |t|
+    t.string "nombre"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "productos", force: :cascade do |t|
-    t.string "name"
-    t.integer "cantidad"
+  create_table "tweets", force: :cascade do |t|
+    t.string "tweets"
+    t.integer "usuario_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["usuario_id"], name: "index_tweets_on_usuario_id"
   end
 
   create_table "usuarios", force: :cascade do |t|
@@ -31,8 +40,13 @@ ActiveRecord::Schema.define(version: 2021_07_19_160743) do
     t.integer "edad"
     t.string "email"
     t.string "contrasena"
+    t.integer "rol_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["rol_id"], name: "index_usuarios_on_rol_id"
   end
 
+  add_foreign_key "mensajes", "usuarios"
+  add_foreign_key "tweets", "usuarios"
+  add_foreign_key "usuarios", "rols"
 end

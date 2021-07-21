@@ -6,6 +6,7 @@ one:
   edad: 1
   email: MyString
   contrasena: MyString
+  rol: one
 
 two:
   nombre: MyString
@@ -13,3 +14,4 @@ two:
   edad: 1
   email: MyString
   contrasena: MyString
+  rol: two
