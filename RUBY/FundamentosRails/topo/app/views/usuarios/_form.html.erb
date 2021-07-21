@@ -38,7 +38,7 @@
 
   <div class="field">
     <%= form.label :rol_id %>
-    <%= form.text_field :rol_id %>
+    <%= collection_select(:usuario, :rol_id, Rol.all, :id, :nombre, prompt: true) %>
   </div>
 
   <div class="actions">

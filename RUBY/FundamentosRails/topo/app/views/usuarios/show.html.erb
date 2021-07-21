@@ -27,7 +27,11 @@
 
 <p>
   <strong>Rol:</strong>
-  <%= @usuario.rol_id %>
+  <% @rols.each do |rol| %>
+    <% if rol.id == @usuario.rol_id %>
+      <%= rol.nombre %>
+    <% end %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_usuario_path(@usuario) %> |

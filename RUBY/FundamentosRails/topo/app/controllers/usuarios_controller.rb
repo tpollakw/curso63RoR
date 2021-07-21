@@ -9,11 +9,13 @@ class UsuariosController < ApplicationController
 
   # GET /usuarios/1 or /usuarios/1.json
   def show
+    @rols = Rol.all
   end
 
   # GET /usuarios/new
   def new
     @usuario = Usuario.new
+    @rols = Rol.all
   end
 
   # GET /usuarios/1/edit
